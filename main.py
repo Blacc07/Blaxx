@@ -8,10 +8,9 @@ DUNE_API_KEY = os.environ.get("DUNE_API_KEY")
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-# Dune Query IDs (Replace with your actual saved query IDs)
-DUNE_SOLANA_QUERY_ID = "YOUR_SOLANA_QUERY_ID"
-DUNE_EVM_QUERY_ID = "YOUR_EVM_QUERY_ID"
-
+# Dune Query IDs (Read from environment variables)
+DUNE_SOLANA_QUERY_ID = os.environ.get("DUNE_SOLANA_QUERY_ID")
+DUNE_EVM_QUERY_ID = os.environ.get("DUNE_EVM_QUERY_ID")
 # File to store processed leads for deduplication
 STATE_FILE = "processed_leads.json"
 
