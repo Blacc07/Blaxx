@@ -26,11 +26,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
 
-    - name: Run Lead Generation Script
+       - name: Run Lead Generation Script
       env:
         DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        DUNE_SOLANA_QUERY_ID: ${{ secrets.DUNE_SOLANA_QUERY_ID }}
+        DUNE_EVM_QUERY_ID: ${{ secrets.DUNE_EVM_QUERY_ID }}       
       run: python main.py
 
     - name: Commit and push state file
